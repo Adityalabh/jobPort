@@ -19,7 +19,7 @@ import EditCompany from "./Pages/RecruiterSide/EditCompany";
 import CreatedJobs from "./Pages/RecruiterSide/CreatedJobs";
 import CreatJob from "./Pages/RecruiterSide/CreatJob";
 import EditJob from "./Pages/RecruiterSide/EditJob";
-import Applicants from "./Pages/RecruiterSide/applicants";
+import Applicants from "./Pages/RecruiterSide/Applicants";
 import ProtectedRoute from "./Pages/RecruiterSide/ProtectedRoute";
 import SavedJobs from "./Pages/SavedJobs";
 

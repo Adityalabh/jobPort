@@ -24,7 +24,7 @@ import ProtectedRoute from "./Pages/RecruiterSide/ProtectedRoute";
 import SavedJobs from "./Pages/SavedJobs";
 // import dotenv from"dotenv";
 
-dotenv.config();
+// dotenv.config();
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 

@@ -25,7 +25,7 @@ import SavedJobs from "./Pages/SavedJobs";
 // import dotenv from"dotenv";
 
 dotenv.config();
-axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
+axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
 function App() {

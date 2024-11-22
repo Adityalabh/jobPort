@@ -22,10 +22,10 @@ import EditJob from "./Pages/RecruiterSide/EditJob";
 import Applicants from "./Pages/RecruiterSide/Applicants";
 import ProtectedRoute from "./Pages/RecruiterSide/ProtectedRoute";
 import SavedJobs from "./Pages/SavedJobs";
-import dotenv from"dotenv";
+// import dotenv from"dotenv";
 
 dotenv.config();
-axios.defaults.baseURL = process.env.VITE_REACT_APP_BACKEND_BASEURL;
+axios.defaults.baseURL = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL;
 axios.defaults.withCredentials = true;
 
 function App() {

@@ -26,6 +26,7 @@ import SavedJobs from "./Pages/SavedJobs";
 
 // dotenv.config();
 axios.defaults.baseURL = "https://jobport-1-neds.onrender.com";
+// axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
 function App() {

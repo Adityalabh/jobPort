@@ -22,10 +22,8 @@ const SavedJobs = () => {
       <div className="w-full grid xl:grid-cols-3 md:grid-cols-2 min-h-screen bg-gray-100">
         {user.profile.savedJobs.length > 0 &&
           user?.profile?.savedJobs.map((item, index) => (
-            <div className="">
-              <div key={index} className="m-4 bg-white">
+              <div key={index} className="m-4 ">
                 <FilteredJobs job={item} />
-              </div>
             </div>
           ))}
       </div>

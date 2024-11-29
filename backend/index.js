@@ -18,6 +18,7 @@ console.log("MongoDB URL:", process.env.PORT);
 app.use(cookieParser());
 app.use(cors({
     origin:process.env.URL,
+    // origin:'http://localhost:5173',
     credentials:true
 }));
 

@@ -15,7 +15,7 @@ const Jobs = () => {
   const { srchJobByText } = useSelector((store) => store.jobs);
   const [filteredJob, setFilteredJob] = useState();
   const [toggleIcon, settoggleIcon] = useState(false);
-  const {jobRefresh} = useSelector((store)=>store.jobs);
+  const { jobRefresh } = useSelector((store) => store.jobs);
 
   useEffect(() => {
     if (Array.isArray(alljobs) && alljobs.length > 0) {
@@ -34,7 +34,7 @@ const Jobs = () => {
     } else {
       setFilteredJob([]);
     }
-  }, [srchJobByText,jobRefresh]);
+  }, [srchJobByText, jobRefresh]);
 
   // const handleToggle = () => {
   //   settoggleIcon(!toggleIcon);
@@ -47,29 +47,32 @@ const Jobs = () => {
       <div className="sticky z-50 top-0 bg-white border-b shadow-md border-gray-300">
         <Navbar />
       </div>
-      <div className="w-full flex min-h-screen relative bg-gray-100">
-        <div
-          className={` ${
-            toggleIcon === false
-              ? "hidden "
-              : "flex shadow-2xl border-r border-gray-300 "
-          }  min-h-screen md:flex md:relative md:shadow-sm  justify-center border-r px-4   z-40 bg-white `}
-        >
-          <div className="mt-7 ">
-            <JobFilter className="" />
-          </div>
-        </div>
+      <div className=" flex min-h-screen relative bg-gray-100">
 
-        {/* Toggle */}
-        <div
-          onClick={() => settoggleIcon(!toggleIcon)}
-          className=" z-50 md:hidden h-fit w-fit cursor-pointer"
-        >
-          {!toggleIcon ? (
-            <i className="fa-solid fa-bars  text-2xl  my-4 mx-2 hover:bg-gray-400 rounded-full p-1"></i>
-          ) : (
-            <i className="fa-solid fa-x fixed ml-48 text-xl my-4 hover:bg-gray-300 pr-1 rounded-full"></i>
-          )}
+        <div className=" lg:w-[350px] ">
+          <div
+            className={` ${
+              toggleIcon === false
+                ? "hidden "
+                : "flex shadow-md border-r border-gray-300 w-[200px] absolute bg-white z-30 h-full"
+            }  pl-4 md:block lg:shadow-md lg:border-r lg:border-gray-300 py-7  h-full`}
+          >
+            <div className="pt-4 ">
+              <JobFilter className="" />
+            </div>
+
+          </div>
+          {/* Toggle */}
+          <div
+            onClick={() => settoggleIcon(!toggleIcon)}
+            className=" md:hidden cursor-pointer "
+          >
+            {!toggleIcon ? (
+              <i className="fa-solid fa-bars   text-2xl  my-4 mx-2 hover:bg-gray-300 rounded-full p-1"></i>
+            ) : (
+              <i className="fa-solid fa-x absolute top-6 z-30 left-40  text-lg my-4 hover:bg-gray-200 p-1 rounded-full"></i>
+            )}
+          </div>
         </div>
 
         {filteredJob?.length === 0 && (
@@ -79,10 +82,12 @@ const Jobs = () => {
         )}
 
         {/* side content */}
-        <div className={`w-full min-h-screen grid xl:grid-cols-3 md:grid-cols-2 mt-9 `}>
+        <div
+          className={` min-h-screen grid xl:grid-cols-3 md:grid-cols-2 mt-9 z-0`}
+        >
           {filteredJob?.length > 0 &&
             filteredJob.map((job, index) => (
-              <div key={index} className="px-2 ">
+              <div key={index} className="px-2 p-1">
                 <FilteredJobs job={job} />
               </div>
             ))}

@@ -47,7 +47,7 @@ const FilteredJobs = ({ job }) => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3 }}
-      className=" border border-gray-300  p-2 rounded-md shadow-xl hover:scale-105 cursor-pointer h-fit min-w-72"
+      className="bg-white border border-gray-300 p-2 rounded-md shadow-lg hover:scale-105 cursor-pointer min-w-72"
     >
       <div className="flex justify-between ">
         <p>{timeSince(job?.createdAt)} </p>

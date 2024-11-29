@@ -52,7 +52,7 @@ const EditCompany = () => {
   }, [currCompany]);
 
   const navigate = useNavigate();
-  const [logo, setLogo] = useState(currCompany.logo || "");
+  const [logo, setLogo] = useState(currCompany?.logo || "");
   const [loading, setLoading] = useState(false);
 
   const handleInp = (e) => {

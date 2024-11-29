@@ -90,31 +90,31 @@ const JobProfile = ({ open, setOpen, job }) => {
         <div className="mt-7">
           <p>
             <span className="font-bold pr-4">Role:</span>
-            {currJob.title}
+            {currJob?.title}
           </p>
           <p>
             <span className="font-bold pr-4">Location</span>
-            {currJob.location}
+            {currJob?.location}
           </p>
           <p>
             <span className="font-bold pr-4">Description:</span>
-            {currJob.description}
+            {currJob?.description}
           </p>
           <p>
             <span className="font-bold pr-4">Expreince:</span>
-            {currJob.jobType}
+            {currJob?.jobType}
           </p>
           <p>
             <span className="font-bold pr-4">Salary:</span>
-            {currJob.salary}
+            {currJob?.salary}
           </p>
           <p>
             <span className="font-bold pr-4">Total Applicants:</span>
-            {currJob.applications.length}
+            {currJob?.applications.length}
           </p>
           <p>
             <span className="font-bold pr-4">Posted Date:</span>
-            {timeSince(currJob.createdAt)}
+            {timeSince(currJob?.createdAt)}
           </p>
         </div>
       </DialogContent>
